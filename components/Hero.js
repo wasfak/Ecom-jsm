@@ -35,12 +35,7 @@ const Hero = () => {
           your active life.
         </p>
 
-        <Button
-          label="Shop now"
-          iconURL={arrowRight}
-          /*     textColor="black"
-          backgroundColor="coral-red" */
-        />
+        <Button label="Shop now" iconURL={arrowRight} />
 
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((stat, index) => (
@@ -62,6 +57,7 @@ const Hero = () => {
           height={450}
           priority
           className="object-contain relative z-10"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
 
         <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">

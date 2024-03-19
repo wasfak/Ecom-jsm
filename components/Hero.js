@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import { shoes, statistics } from "../constants";
 
+import { palanquin, montserrat, lusitana } from "@/app/fonts";
+
 import { bigShoe1 } from "../assets/images";
 import { arrowRight } from "../assets/icons";
 import Image from "next/image";
@@ -18,11 +20,16 @@ const Hero = () => {
       className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28">
-        <p className="text-xl font-montserrat text-coral-red">
+        <p
+          className={`text-2xl font-montserrat text-coral-red ${palanquin.className} antialiased`}
+          /*   className={`text-2xl  text-coral-red  antialiased font-montserrat`} */
+        >
           Our Summer collections
         </p>
 
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
+        <h1
+          className={`mt-10 ${palanquin.className} text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold`}
+        >
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
             The New Arrival
           </span>
@@ -41,7 +48,9 @@ const Hero = () => {
           {statistics.map((stat, index) => (
             <div key={index}>
               <p className="text-4xl font-palanquin font-bold">{stat.value}</p>
-              <p className="leading-7 font-montserrat text-slate-gray">
+              <p
+                className={`leading-7 ${montserrat.className} text-slate-gray`}
+              >
                 {stat.label}
               </p>
             </div>
